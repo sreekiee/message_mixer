@@ -52,4 +52,12 @@ MessageMixer.encode = function(string) {
     return string;
 };
 
-module.exports = MessageMixer;
+MessageMixer.palindrome = function(word){
+  return word + " " + MessageMixer.reverseWord(word);
+};
+
+MessageMixer.pigLatin = function(sentence, character) {
+  return sentence.split(" ").join(character + " ");
+};
+
+export default MessageMixer;
